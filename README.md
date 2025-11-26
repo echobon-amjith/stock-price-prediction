@@ -1,33 +1,14 @@
-# Data Science Lifecycle Base Repo
-
-Use this repo as a template repository for data science projects using the Data Science Life Cycle Process. This repo is meant to serve as a launch off point. Our goal is to introduce only **minimum viable opinions** into the structure of this repo in order to make this repository/framework useful across a variety of data science projects and workflows. Therefore, we will tend to err to the side of omitting something if we're not confident that it's widely useful or think it's overly opinionated. That shouldn't stop you from forking this repo and adapting it to fit the needs of your project/team/organization.
-
-With that in mind, if there is something that you think we're missing or should change, open an issue and we'll talk!
-
-## Get started.
-
-The only manual step required is that you have to manually create the labels. The label names, descriptions, and color codes can be found in the [.github/labels.yaml](/.github/labels.yaml) file. For more information on creating labels, review the GitHub docs [here](https://help.github.com/en/github/managing-your-work-on-github/creating-a-label).
-
-## Contributing
-
-Issues and suggestions for this template repo should be opened in the main [dslp repo](https://github.com/MicrosoftDSST/dslp/issues).
-
-## Default Directory Structure
-
+# Stock Price Prediction
+A data science project for predicting stock prices using machine learning techniques, following the Data Science Lifecycle Process.
+## Background
+I invested in IOC stock with minimal knowledge in the stock market. I missed the opportunity  to sell the stock at a profitable price. Now I need to know before hand when I can sell of the stock at a reasonable profit.
+## Project Overview
+This project aims to develop and evaluate predictive models for stock price movement using historical market data.
+## Prerequisites
+- Python 3.9
+- create a conda environment using [environment.yml](environments\environment.yml)
+## Directory Structure
 ```
-├── .cloud              # for storing cloud configuration files and templates (e.g. ARM, Terraform, etc)
-├── .github
-│   ├── ISSUE_TEMPLATE
-│   │   ├── Ask.md
-│   │   ├── Data.Aquisition.md
-│   │   ├── Data.Create.md
-│   │   ├── Experiment.md
-│   │   ├── Explore.md
-│   │   └── Model.md
-│   ├── labels.yaml
-│   └── workflows
-├── .gitignore
-├── README.md
 ├── code
 │   ├── datasets        # code for creating or getting datasets
 │   ├── deployment      # code for deploying models
@@ -44,11 +25,25 @@ Issues and suggestions for this template repo should be opened in the main [dslp
 │   ├── media           # storing images, videos, etc, needed for docs.
 │   ├── references      # for collecting and documenting external resources relevant to the project
 │   └── solution_architecture.md    # describe and diagram solution design and architecture
-├── environments
-├── notebooks
-├── pipelines           # for pipeline orchestrators i.e. AzureML Pipelines, Airflow, Luigi, etc.
+├── environments        # Environment configuration files
+├── notebooks           # Exploratory analysis and experimentation
 ├── setup.py            # if using python, for finding all the packages inside of code.
 └── tests               # for testing your code, data, and outputs
     ├── data_validation
     └── unit
 ```
+## Data Pipeline
+[Describe your data flow - e.g., data sources → ingestion → cleaning → feature engineering → modeling]
+- Using yfinance library in python, the daily OHLCV data of IOC stock from 2015 is festched into MySQL database as a table 
+- In MySQL database the table is cleaned to include the non business days data and a new column log_close is added to include the scaled values of the closing price. Both using SQL query.
+-  After the data cleaning the data from the SQL databse is then fetched as a dataframe into python for data analysis and modelling.
+- For model evaluation the data undergoes train-test split, where 85% of the data is used as training set.
+- The training set is used for training the model and the test data is passed on to the model for evaluating the model. 
+## Models
+[Document your modeling approach, algorithms used, and key results]
+## Key Files
+- [setup.py](setup.py) - Package configuration and dependencies
+- [data/README.md](data/README.md) - Data documentation
+- [docs/solution_architecture.md](docs/solution_architecture.md) - Architecture overview
+## Contact
+[Add contact information or team details]
