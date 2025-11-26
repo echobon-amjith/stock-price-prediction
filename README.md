@@ -42,8 +42,7 @@ This project aims to develop and evaluate predictive models for stock price move
 [SARIMA Model](https://github.com/ecobon-amjith/stock-price-prediction/issues/8#issue-3653926631)
 [LSTM Model](https://github.com/ecobon-amjith/stock-price-prediction/issues/10#issue-3654758030)
 ## Key Files
-- [setup.py](setup.py) - Package configuration and dependencies
-- [data/README.md](data/README.md) - Data documentation
-- [docs/solution_architecture.md](docs/solution_architecture.md) - Architecture overview
+- [conda environment](environments/environment.yml) - Package configuration and dependencies
+- [LSTM Model] - LSTM Model training and evaluation code
 ## Contact
-[Add contact information or team details]
+amjith4you@outlook.com
