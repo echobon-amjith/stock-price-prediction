@@ -33,14 +33,14 @@ This project aims to develop and evaluate predictive models for stock price move
     └── unit
 ```
 ## Data Pipeline
-[Describe your data flow - e.g., data sources → ingestion → cleaning → feature engineering → modeling]
 - Using yfinance library in python, the daily OHLCV data of IOC stock from 2015 is festched into MySQL database as a table 
 - In MySQL database the table is cleaned to include the non business days data and a new column log_close is added to include the scaled values of the closing price. Both using SQL query.
 -  After the data cleaning the data from the SQL databse is then fetched as a dataframe into python for data analysis and modelling.
 - For model evaluation the data undergoes train-test split, where 85% of the data is used as training set.
 - The training set is used for training the model and the test data is passed on to the model for evaluating the model. 
 ## Models
-[Document your modeling approach, algorithms used, and key results]
+[SARIMA Model](https://github.com/ecobon-amjith/stock-price-prediction/issues/8#issue-3653926631)
+[LSTM Model](https://github.com/ecobon-amjith/stock-price-prediction/issues/10#issue-3654758030)
 ## Key Files
 - [setup.py](setup.py) - Package configuration and dependencies
 - [data/README.md](data/README.md) - Data documentation
