@@ -43,6 +43,6 @@ This project aims to develop and evaluate predictive models for stock price move
 [LSTM Model](https://github.com/ecobon-amjith/stock-price-prediction/issues/10#issue-3654758030)
 ## Key Files
 - [conda environment](environments/environment.yml) - Package configuration and dependencies
-- [LSTM Model] - LSTM Model training and evaluation code
+- [LSTM Model](code/models/keras_lstm_model.ipynb) - LSTM Model training and evaluation code
 ## Contact
 amjith4you@outlook.com
