@@ -3,7 +3,7 @@ A data science project for predicting stock prices using machine learning techni
 ## Background
 I invested in IOC stock with minimal knowledge in the stock market. I missed the opportunity  to sell the stock at a profitable price. Now I need to know before hand when I can sell of the stock at a reasonable profit.
 ## Project Overview
-This project aims to develop and evaluate predictive models for stock price movement using historical market data.
+This project aims to develop and evaluate predictive models for stock price movement using historical market data. Refer [Project Requirements](https://github.com/echobon-amjith/stock-price-prediction/issues/1) for more details.
 ## Prerequisites
 - Python 3.9
 - create a conda environment using [environment.yml](environments\environment.yml)
@@ -39,8 +39,8 @@ This project aims to develop and evaluate predictive models for stock price move
 - For model evaluation the data undergoes train-test split, where 85% of the data is used as training set.
 - The training set is used for training the model and the test data is passed on to the model for evaluating the model. 
 ## Models
-[SARIMA Model](https://github.com/ecobon-amjith/stock-price-prediction/issues/8#issue-3653926631)
-[LSTM Model](https://github.com/ecobon-amjith/stock-price-prediction/issues/10#issue-3654758030)
+- [SARIMA Model](https://github.com/ecobon-amjith/stock-price-prediction/issues/8#issue-3653926631)
+- [LSTM Model](https://github.com/ecobon-amjith/stock-price-prediction/issues/10#issue-3654758030)
 ## Key Files
 - [conda environment](environments/environment.yml) - Package configuration and dependencies
 - [LSTM Model](code/models/keras_lstm_model.ipynb) - LSTM Model training and evaluation code
